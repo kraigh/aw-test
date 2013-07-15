@@ -99,21 +99,21 @@ jQuery(document).ready(function ($) {
       var dobDay = $('#modal-content #form-birthdate-'+index+' select[name="birth[day]"]').val();
       var dobYear = $('#modal-content #form-birthdate-'+index+' select[name="birth[year]"]').val();
       var driver = {
-        firstName : $('#form-firstname-'+index).val(),
-        middleName : $('#form-middlename-'+index).val(),
-        lastName : $('#form-lastname-'+index).val(),
+        firstName : $('#modal-content #form-firstname-'+index).val(),
+        middleName : $('#modal-content #form-middlename-'+index).val(),
+        lastName : $('#modal-content #form-lastname-'+index).val(),
         dob : dobMonth+'-'+dobDay+'-'+dobYear,
-        married : $('#form-married-'+index).is(':checked')
+        married : $('#modal-content #form-married-'+index).is(':checked')
       }
       drivers.push(driver);
     }
 
     for (var index = 1; index < parseInt(vehicleNo)+1; index++) {
       var vehicle = {
-        year : $('#vehicle-'+index+' #year').val(),
-        make : $('#vehicle-'+index+' #make').val(),
-        model : $('#vehicle-'+index+' #model').val(),
-        trim : $('#vehicle-'+index+' #trim').val()
+        year : $('#modal-content #vehicle-'+index+' #year').val(),
+        make : $('#modal-content #vehicle-'+index+' #make').val(),
+        model : $('#modal-content #vehicle-'+index+' #model').val(),
+        trim : $('#modal-content #vehicle-'+index+' #trim').val()
       }
       vehicles.push(vehicle);
     }
