@@ -85,6 +85,9 @@ jQuery(document).ready(function ($) {
 
   $('#form3Open').live('click', function() {
 
+    // SET LOADER
+    $('#modal-content').html('<div id="modal-loading"></div>');
+
     var mainDriver = {
       firstName : driverFirstName,
       middleName : driverMiddleName,
@@ -117,9 +120,6 @@ jQuery(document).ready(function ($) {
       }
       vehicles.push(vehicle);
     }
-
-    // SET LOADER
-    $('#modal-content').html('<div id="modal-loading"></div>');
 
     var allData = {
       zipcode : zip,
