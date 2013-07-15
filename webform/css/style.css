@@ -30,6 +30,10 @@
   display: none;
 }
 
+#modal-content {
+  margin-bottom: 100px;
+}
+
 #modal-content h2 {
   margin-top: 0px !important;
   margin-bottom: 20px !important;
