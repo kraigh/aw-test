@@ -1,0 +1,163 @@
+<!doctype html>
+<head>
+<title>Edwardsville Insurance Agent - AW Insurance</title>
+
+  <!-- KRAIGS STUFF - INCLUDES -->
+  <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <link rel='stylesheet' type='text/css' href='webform/js/leanModal/leanmodal.css' />
+  <script type='text/javascript' src='webform/js/leanModal/leanmodal.js'></script>
+
+  <script type='text/javascript' src='webform/js/bday-picker.js'></script>
+
+  <link rel='stylesheet' type='text/css' href='webform/css/style.css' />
+  <script type='text/javascript' src='webform/js/scripts.js'></script>
+
+
+  <script type="text/javascript" charset="utf-8" src="webform/js/vehicle_form.js"></script>
+
+  <!-- END KRAIGS STUFF -->
+
+</head>
+<body>
+  <div class="main">
+  <h1>Modal Test</h1>
+  <p>This is a pop-up modal that was developed for a client using jQuery and a little PHP. It needed to be very plug-and-play, meaning it could be attached to different sites with very little adjustment. Makes use of a third-party vehicle database, a jquery plugin for the birthdate drop-downs, and a jquery plugin for the modal.</p>
+
+        <div id="zip-entry" class="custom-form" class="call-to-action">
+
+
+
+          <label for="form-zip" id="ziplabel">
+            <span>Zip Code:</span>
+            <input type="text" id="form-zip" name="form-zip" required />
+          </label>
+
+
+
+          <a href="javascript:;" id="formOpen" class="button button-blue" data-modal-content-id='form-page1' data-modal-width='300' data-modal-height='100'>
+            Start Saving Now</a>
+
+          <div id="message"></div>
+
+
+        </div><!-- end of .call-to-action -->
+
+
+
+
+
+
+
+
+
+
+<!-- HIDDEN FORMS -->
+
+
+
+<div id="form-page1" class="custom-form hidden-form">
+
+    <h2>Contact Information - Primary Driver</h2>
+    <p>Let us know a little bit about you!</p>
+    <p>
+      <label for="form-firstname">
+        <span>First Name: </span>
+        <input type="text" id="form-firstname" class="form-firstname" name="form-firstname" required />
+      </label>
+    </p>
+    <p>
+      <label for="form-middlename">
+        <span>Middle Initial: </span>
+        <input type="text" id="form-middlename" class="form-middlename" name="form-middlename" required />
+      </label>
+    </p>
+    <p>
+      <label for="form-lastname">
+        <span>Last Name: </span>
+        <input type="text" id="form-lastname" class="form-lastname" name="form-lastname" required />
+      </label>
+    </p>
+    <p>
+      <label for="form-birthdate">
+        <span>What is your birthdate? </span>
+          <div id="form-birthdate"></div>
+      </label>
+    </p>
+    <p>
+      <label for="form-married">
+        <input type="checkbox" name="married" id="form-married"><span> Married</span>
+      </label>
+    </p>
+    <p>
+      <label for="form-mail">
+        <span>E-mail: </span>
+        <input type="email" id="form-mail" class="form-mail" name="form-mail" required />
+        <div class="error" id="email-error"></div>
+        <p>Note: We keep your email private!</p>
+      </label>
+    </p>
+    <p>
+      <label for="form-vehicle-no">
+        <span>How many vehicles?</span>
+        <select name="form-vehicle-no" id="form-vehicle-no" class="form-vehicle-no">
+          <option value="Select one" selected>Select one</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+      </label>
+    </p>
+    <p>
+      <label for="form-driver-no">
+        <span>Any Additional Drivers?</span>
+        <select name="form-driver-no" id="form-driver-no" class="form-driver-no">
+          <option value="None" selected>None</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+      </label>
+    </p>
+
+
+
+    <a href="javascript:;" id="form2Open" class="button button-blue" data-modal-content-id='form-page2' data-modal-width='400' data-modal-height='300'>Continue</a>
+</div>
+
+<div id="form-page2" class="custom-form hidden-form">
+  <h2>Additional Drivers</h2>
+  <div id="extra-drivers"></div>
+  <h2>Vehicle Information</h2>
+  <div id="vehicles"></div>
+  <a href="javascript:;" id="form3Open" class="button button-blue">Continue</a>
+</div>
+
+<div id="form-page3" class="custom-form hidden-form">
+  <h2>Your submission has been sent. You will be contacted shortly!</h2>
+  <a href="javascript:;" id="page-reload" class="button button-blue">Close</a>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- END HIDDEN FORMS -->
+</div>
+</body>
+</html>

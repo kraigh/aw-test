@@ -1,0 +1,93 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>	
+		<script type="text/javascript" charset="utf-8" src="script/vehicle_form.js"></script>	
+		<title>Demo: Makes and Models List Only</title>				
+		<style>
+			body{font-family:arial; font-size:12px;}
+			h4{margin:20px 0 6px 0; padding:6px 0 6px 0; border-bottom:1px solid #ccc; background:#efefef; font-size:13px; font-weight:bold; font-family:arial;}
+			h4:first-child{margin:0 0 6px 0; padding:6px 0 6px 0;}			
+		</style>
+	</head>
+	<body>				
+		<table width="580" border="0" align="center" cellpadding="8" cellspacing="0">
+			<tr>
+				<td width="120"><strong>Vehicle Year:</strong></td>
+				<td>
+					<select id="year" name="year" title="Vehicle Year Quoted" onchange="return call_year();">
+						<option selected="selected" value="">Year</option><option value="2014">2014</option>
+						<option value="2013">2013</option>
+						<option value="2012">2012</option>
+						<option value="2011">2011</option>
+						<option value="2010">2010</option>						
+						<option value="2009">2009</option>
+						<option value="2008">2008</option>
+						<option value="2007">2007</option>
+						<option value="2006">2006</option>						
+						<option value="2005">2005</option>						
+						<option value="2004">2004</option>						
+						<option value="2003">2003</option>						
+						<option value="2002">2002</option>						
+						<option value="2001">2001</option>						
+						<option value="2000">2000</option>						
+					</select>					
+				</td>
+				<td width="20">
+					<img src="images/preloader.gif" id="make_loading" style="display:none" />
+				</td>
+			</tr>	
+			<tr>
+				<td><strong>Vehicle Make:</strong></td>
+				<td>
+					<select id="make" name="make" title="Vehicle Make Quoted" disabled onchange="return call_make();">
+						<option selected="selected" value="">Make</option>						
+					</select>
+				</td>
+				<td>
+					<img src="images/preloader.gif" id="model_loading" style="display:none" />
+				</td>
+			</tr>	
+			<tr>
+				<td><strong>Vehicle Model:</strong></td>
+				<td>
+					<select id="model" name="model" title="Vehicle Model Quoted" disabled onchange="return call_model();">
+						<option selected="selected" value="">Model</option>						
+					</select>
+				</td>
+				<td>
+					<img src="images/preloader.gif" id="trim_loading" style="display:none" />
+				</td>
+			</tr>
+			<tr>
+				<td><strong>Vehicle Trim:</strong></td>
+				<td>
+					<select id="trim" name="trim" title="Vehicle Trim Quoted" disabled onchange="return call_trim();">
+						<option selected="selected" value="">Trim</option>						
+					</select>
+				</td>
+				<td>
+					<img src="images/preloader.gif" id="detail_loading" style="display:none" />
+				</td>
+			</tr>					
+			<tr>
+				<td valign="top"><strong>You have Selected:</strong></td>
+				<td id="detail" colspan="2"></td>
+			</tr>							
+		</table>
+				<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-362919-29']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</body>
+</html>
