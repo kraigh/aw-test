@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
 
   $('#menu-item-839 a, #promo-image a').live('click', function() {
     showModal($('#zip-entry').html(), '', '500', '500');
-    $('#' + $(this).attr('data-modal-content-id')).remove();
+    // $('#' + $(this).attr('data-modal-content-id')).remove();
   });
 
   $('#formOpen').live('click', function() {
@@ -24,9 +24,9 @@ jQuery(document).ready(function ($) {
       zip = $('#form-zip').val();
 
       showModal($('#form-page1').html(), '', '500', '500');
-      $('#' + $(this).attr('data-modal-content-id')).remove();
+      // $('#' + $(this).attr('data-modal-content-id')).remove();
       setTimeout(function(){
-        $("#form-birthdate").birthdaypicker({});
+        $("#modal-content #form-birthdate").birthdaypicker({});
       }, 500);
     } else {
       $('#message').html('<p class="error">Please enter your zip code!</p>');
@@ -51,7 +51,7 @@ jQuery(document).ready(function ($) {
     driverNo = $('#modal-content #form-driver-no').val();
 
     if (driverMail != '' && !isEmail(driverMail)) {
-      $('#email-error').html('<span>Please enter a valid email address</span>');
+      $('#modal-content #email-error').html('<span>Please enter a valid email address</span>');
     } else {
 
       if (driverNo != "none") {
@@ -78,7 +78,7 @@ jQuery(document).ready(function ($) {
 
 
       showModal($('#form-page2').html(), '', '500', '500');
-      $('#' + $(this).attr('data-modal-content-id')).remove();
+      // $('#' + $(this).attr('data-modal-content-id')).remove();
     }
 
   });
@@ -118,6 +118,9 @@ jQuery(document).ready(function ($) {
       vehicles.push(vehicle);
     }
 
+    // SET LOADER
+    $('#modal-content').html('<div id="modal-loading"></div>');
+
     var allData = {
       zipcode : zip,
       mail : driverMail,
@@ -133,11 +136,12 @@ jQuery(document).ready(function ($) {
       dataType : 'json',
       url : 'http://kraigh-com-lsdezfwbkgkq.runscope.net/webform/email.php',
       data : 'vars='+vars,
-      success: function() {
-        showModal($('#form-page3').html(), '', '500', '500');
-        $('#' + $(this).attr('data-modal-content-id')).remove();
-      }
+      success: function() {}
     });
+
+    // This ideally needs to go inside the success function
+    alert('Thank you for contacting AW Insurance! Your submission has been sent, and you will hear from us soon!');
+    location.reload();
 
   });
 
